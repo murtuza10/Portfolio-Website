@@ -1,0 +1,52 @@
+PORTFOLIO WEBSITE - DOWNLOAD INSTRUCTIONS
+====================================
+
+Here are 4 ways to download your portfolio website code from Replit:
+
+METHOD 1: USING THE FILES PANEL
+--------------------------------
+1. Look for the "Files" panel on the left side of the Replit interface
+2. Right-click on folders/files you want to download (client, server, etc.)
+3. Select "Download" from the context menu
+4. Repeat for each important folder/file
+
+METHOD 2: USING THE THREE-DOT MENU
+----------------------------------
+1. Look for the three-dot menu (⋮) at the top of your Replit project
+2. Click on it and look for "Download as ZIP" or similar option
+3. Save the ZIP file to your computer
+
+METHOD 3: FILE MENU OPTION
+-------------------------
+1. Look at the very top of your Replit window
+2. Click on the "File" menu in the top-left corner
+3. Select "Download as zip" from the dropdown
+
+METHOD 4: GITHUB EXPORT
+----------------------
+1. Click on the "Version Control" tab in the Replit sidebar (Git icon)
+2. Connect to GitHub by following the prompts
+3. Sync your code to GitHub
+4. Download from GitHub directly
+
+IMPORTANT FOLDERS/FILES TO INCLUDE:
+----------------------------------
+- client/
+- db/
+- server/
+- shared/
+- components.json
+- drizzle.config.ts
+- package.json
+- postcss.config.js
+- tailwind.config.ts
+- tsconfig.json
+- vite.config.ts
+
+RUNNING LOCALLY AFTER DOWNLOAD:
+-----------------------------
+1. Install Node.js on your computer
+2. Open a terminal/command prompt in the project folder
+3. Run: npm install
+4. Run: npm run dev
+5. Set up PostgreSQL database and update connection string
