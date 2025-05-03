@@ -13,7 +13,7 @@ export default function Footer({ profile }: FooterProps) {
         <div className="flex flex-col md:flex-row justify-between mb-8">
           <div className="mb-8 md:mb-0 md:w-1/3">
             <h3 className="text-2xl font-bold font-source mb-4">
-              <span className="text-secondary">Max</span> Wagner
+              <span className="text-secondary">Murtuza</span> Husain
             </h3>
             <p className="text-gray-300 mb-4">
               {profile?.tagline || "MSc Computer Science student specializing in AI and Machine Learning at the University of Bonn."}
@@ -28,7 +28,7 @@ export default function Footer({ profile }: FooterProps) {
               <a href="https://twitter.com/" className="text-gray-300 hover:text-secondary transition duration-300" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="mailto:max.wagner@example.com" className="text-gray-300 hover:text-secondary transition duration-300">
+              <a href="mailto:murtuzanh@gmail.com" className="text-gray-300 hover:text-secondary transition duration-300">
                 <Mail className="h-5 w-5" />
               </a>
             </div>

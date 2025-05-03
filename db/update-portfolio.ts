@@ -5,7 +5,7 @@ const portfolioData = {
   profile: {
     name: "Murtuza Husain",
     tagline: "MSc Computer Science student at the University of Bonn with professional experience in Software Engineering.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    image: "https://github.com/identicons/murtuza.png"
   },
   education: [
     {
@@ -47,8 +47,8 @@ const portfolioData = {
     { name: "Java", percentage: 90 },
     { name: "Python", percentage: 85 },
     { name: "Machine Learning", percentage: 85 },
-    { name: "JavaScript", percentage: 75 },
     { name: "C++", percentage: 70 },
+    { name: "JavaScript", percentage: 75 },
     { name: "Web Development", percentage: 75 }
   ],
   tools: [
