@@ -66,6 +66,36 @@ export const portfolioData: PortfolioData = {
     { code: "EN", name: "English", proficiency: "Proficient (C2)" },
     { code: "DE", name: "German", proficiency: "Basic (A1)" }
   ],
+  experience: [
+    {
+      title: "Research Intern",
+      company: "University of Bonn",
+      location: "Bonn, Germany",
+      period: "Dec 2023 - Present",
+      description: "Developing multi-modal contrastive learning for complex tasks with minimal labeled data in NLP and vision. Building foundation models for pre-training, fine-tuning, and improving text understanding."
+    },
+    {
+      title: "Software Engineer",
+      company: "Oracle",
+      location: "Hyderabad, India",
+      period: "Jul 2022 - Jul 2023",
+      description: "Developed ITIL-based incident management systems, API-led architecture for automated escalation paths. Created RESTful APIs for service tasks, achieving significant time reductions in incident resolution."
+    },
+    {
+      title: "Software Engineer Intern",
+      company: "Oracle",
+      location: "Remote",
+      period: "Oct 2021 - May 2022",
+      description: "Designed Spring Boot microservices for real-time incident data processing. Integrated Kafka for streamlined data flow between systems and migrated legacy systems to cloud-native architectures."
+    },
+    {
+      title: "Summer Intern (ML, NLP)",
+      company: "DRDO, Ministry of Defence",
+      location: "Pune, India",
+      period: "May 2021 - Jul 2021",
+      description: "Implemented NLP techniques for a DRDO project, delivered insights on semantic recognition strategies, and assisted with implementing pattern recognition algorithms for threat detection."
+    }
+  ],
   projects: [
     {
       id: 1,

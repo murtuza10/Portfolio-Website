@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
@@ -38,6 +39,7 @@ export default function Home() {
       <main>
         <Hero profile={data?.profile} />
         <About education={data?.education} interests={data?.interests} />
+        <Experience experience={data?.experience} />
         <Skills skills={data?.skills} tools={data?.tools} languages={data?.languages} />
         <Projects projects={data?.projects} />
         <Contact contact={data?.contact} />
