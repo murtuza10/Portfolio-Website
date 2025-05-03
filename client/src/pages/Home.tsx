@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Resume from "@/components/Resume";
 import { useQuery } from "@tanstack/react-query";
 import { portfolioData } from "@/data/portfolio-data";
 
@@ -42,6 +43,7 @@ export default function Home() {
         <Experience experience={data?.experience} />
         <Skills skills={data?.skills} tools={data?.tools} languages={data?.languages} />
         <Projects projects={data?.projects} />
+        <Resume />
         <Contact contact={data?.contact} />
       </main>
       <Footer profile={data?.profile} />

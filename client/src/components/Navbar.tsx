@@ -7,6 +7,7 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Resume", href: "#resume" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -83,8 +84,9 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Button className="flex items-center" asChild>
               <a
-                href="/api/download-resume"
-                download="Murtuza-CV-April25.pdf"
+                href="/documents/Murtuza-CV-April25.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Download className="mr-2 h-4 w-4" />
                 Resume
@@ -132,8 +134,9 @@ export default function Navbar() {
               ))}
               <Button className="flex items-center w-fit" asChild>
                 <a
-                  href="/api/download-resume"
-                  download="Murtuza-CV-April25.pdf"
+                  href="/documents/Murtuza-CV-April25.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Download className="mr-2 h-4 w-4" />
                   Resume
