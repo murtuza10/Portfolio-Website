@@ -13,7 +13,7 @@ export default function Hero({ profile }: HeroProps) {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold font-source leading-tight mb-4">
-              Computer Science <span className="text-secondary">Innovator</span> & Researcher
+              Computer Science <span className="text-secondary">Innovator</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 font-inter leading-relaxed">
               {profile?.tagline || "MSc Computer Science student at the University of Bonn, specializing in artificial intelligence and machine learning."}
