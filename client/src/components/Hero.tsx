@@ -53,10 +53,10 @@ export default function Hero({ profile }: HeroProps) {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-secondary shadow-xl">
                 <Avatar className="w-full h-full">
-                  <AvatarImage src={profile?.image || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"} 
-                               alt="Max Wagner profile photo" 
+                  <AvatarImage src={profile?.image?.startsWith('/') ? profile.image : `/${profile?.image}` || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"} 
+                               alt="Murtuza Husain profile photo" 
                                className="w-full h-full object-cover" />
-                  <AvatarFallback className="text-4xl">MW</AvatarFallback>
+                  <AvatarFallback className="text-4xl">MH</AvatarFallback>
                 </Avatar>
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white text-primary p-4 rounded-lg shadow-lg">

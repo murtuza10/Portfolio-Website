@@ -11,6 +11,7 @@ export const portfolio = pgTable("portfolio", {
   skills: json("skills").notNull(),
   tools: json("tools").notNull(),
   languages: json("languages").notNull(),
+  experience: json("experience").notNull().$defaultFn(() => []),
   projects: json("projects").notNull(),
   contact: json("contact").notNull(),
 });

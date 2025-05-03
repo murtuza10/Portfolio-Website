@@ -17,6 +17,14 @@ export interface InterestItem {
   icon?: string;
 }
 
+export interface ExperienceItem {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+}
+
 export interface SkillItem {
   name: string;
   percentage: number;
@@ -68,6 +76,7 @@ export interface PortfolioData {
   skills: SkillItem[];
   tools: ToolItem[];
   languages: LanguageItem[];
+  experience: ExperienceItem[];
   projects: ProjectItem[];
   contact: ContactData;
 }

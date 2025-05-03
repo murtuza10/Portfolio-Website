@@ -5,7 +5,7 @@ const portfolioData = {
   profile: {
     name: "Murtuza Husain",
     tagline: "MSc Computer Science student at the University of Bonn with professional experience in Software Engineering.",
-    image: "/images/profile.jpeg"
+    image: "images/profile.jpeg"
   },
   education: [
     {
