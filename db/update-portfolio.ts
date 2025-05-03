@@ -45,32 +45,25 @@ const portfolioData = {
   ],
   experience: [
     {
-      title: "Research Intern",
-      company: "University of Bonn, Institute of Computer Science",
+      title: "Student Assistant Computer Science",
+      company: "ZB Med",
       location: "Bonn, Germany",
-      period: "Dec 2023 - Present",
-      description: "Working with the Pattern Recognition research group on multi-modal contrastive learning for complex tasks with minimal labeled data in the domains of NLP and computer vision. Building and fine-tuning foundation models to improve text understanding."
+      period: "Jun 2025 - Current",
+      description: "Working on Comparative Evaluation of NER Techniques for Agricultural Entities. Evaluating and comparing various NER techniques such as rule-based, prompting and fine-tuning on an agricultural dataset to determine their relative effectiveness and identify the optimal strategy for domain-specific entity extraction."
+    },
+    {
+      title: "Student Assistant Computer Science",
+      company: "GESIS – Leibniz Institute for the Social Sciences",
+      location: "Cologne, Germany",
+      period: "Jan 2024 - Dec 2024",
+      description: "Worked on research project which involved training machine learning models to perform named entity extraction of machine learning terminologies such as MlModel model mentions, dataset mentions, reference links etc. along with the relations present between them on computer science research mentions. Worked on creating scripts to perform coreference resolution on Annotated data."
     },
     {
       title: "Software Engineer",
-      company: "Oracle",
-      location: "Hyderabad, India",
-      period: "Jul 2022 - Jul 2023",
-      description: "Developed ITIL-based incident management systems using Spring Boot microservices architecture with RESTful APIs. Implemented API-led architecture for automated escalation paths, reducing incident resolution time by 40%. Created over 15 RESTful APIs for service management tasks."
-    },
-    {
-      title: "Software Engineer Intern",
-      company: "Oracle",
-      location: "Remote",
-      period: "Oct 2021 - May 2022",
-      description: "Designed and developed Spring Boot microservices for real-time incident data processing. Integrated Kafka for efficient data streaming between systems and supported migration of legacy systems to cloud-native architectures, improving system reliability by 30%."
-    },
-    {
-      title: "Summer Intern (ML/NLP)",
-      company: "DRDO, Ministry of Defence",
+      company: "Avaya",
       location: "Pune, India",
-      period: "May 2021 - Jul 2021",
-      description: "Implemented advanced NLP techniques for a confidential DRDO project. Delivered insights on semantic recognition strategies and assisted in implementing pattern recognition algorithms for efficient threat detection in unstructured text data."
+      period: "Jul 2022 - Sep 2023",
+      description: "Designed and implemented a robust software ecosystem: (1) Orchestrated REST APIs adhering to OpenAPI 3.0, (2) Designed AVSC schemas for Kafka data flow, (3) Crafted detailed API documentation, (4) Engineered Java, Spring, and PostgreSQL microservices, (5) Enhanced bulk agent management features, (6) Designed efficient Spring Data JPA repositories, (7) Conducted JUnit testing, (8) Deployed microservices on Kubernetes, (9) Resolved UAT and production issues. Used technologies including Java, Spring Boot, Kafka, PostgreSQL, Azure, Kubernetes, and Keycloak."
     }
   ],
   skills: [
