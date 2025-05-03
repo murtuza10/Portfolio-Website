@@ -3,8 +3,11 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import path from "path";
 import fs from "fs";
+import express from "express";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static files from client/public
+  app.use(express.static(path.join(process.cwd(), 'client/public')));
   // API route to get portfolio data
   app.get("/api/portfolio", async (req, res) => {
     try {
