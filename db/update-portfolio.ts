@@ -142,7 +142,7 @@ const portfolioData = {
     location: "Am Jesuitenhof 3, 53117, Bonn, Germany",
     availability: "Open to research collaborations and software development opportunities",
     social: {
-      github: "https://github.com/",
+      github: "https://github.com/murtuza10",
       linkedin: "https://www.linkedin.com/in/murtuzahusain/",
       twitter: "https://twitter.com/",
       googleScholar: "https://scholar.google.com/"

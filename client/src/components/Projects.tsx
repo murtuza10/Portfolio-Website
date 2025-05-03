@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProjectItem } from "@/lib/types";
-import { ExternalLink, Github, FileText, Monitor } from "lucide-react";
+import { Github, FileText, Monitor } from "lucide-react";
 
 interface ProjectsProps {
   projects?: ProjectItem[];
@@ -130,10 +130,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
                     </Badge>
                   ))}
                 </div>
-                <div className="flex justify-between items-center">
-                  <a href="#" className="text-secondary hover:text-primary transition duration-300 text-sm font-medium flex items-center">
-                    <ExternalLink className="h-4 w-4 mr-1" /> View Details
-                  </a>
+                <div className="flex justify-end items-center">
                   <div className="flex items-center space-x-2">
                     {project.links && project.links.github && (
                       <a href={project.links.github} className="text-gray-500 hover:text-primary transition duration-300" title="GitHub Repository">
@@ -159,7 +156,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
         
         <div className="text-center mt-12">
           <a 
-            href="https://github.com/" 
+            href="https://github.com/murtuza10" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-md hover:bg-opacity-90 transition duration-300"
