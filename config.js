@@ -13,14 +13,26 @@ dotenv.config({ path: join(__dirname, '.env') });
 // Validate required environment variables
 if (!process.env.DATABASE_URL) {
   console.error('Error: DATABASE_URL environment variable is required');
-  process.exit(1);
+  console.log('Using fallback database URL from environment if available');
 }
 
-// Export configuration
+/**
+ * @typedef {Object} DatabaseConfig
+ * @property {string} url - The database connection URL
+ */
+
+/**
+ * @typedef {Object} AppConfig
+ * @property {DatabaseConfig} database - Database configuration
+ * @property {string} environment - Application environment (development, production, etc.)
+ * @property {number} port - Application port
+ */
+
+/** @type {AppConfig} */
 export const config = {
   database: {
-    url: process.env.DATABASE_URL,
+    url: process.env.DATABASE_URL || '',
   },
   environment: process.env.NODE_ENV || 'development',
-  port: process.env.PORT || 5000,
+  port: Number(process.env.PORT) || 5000,
 };

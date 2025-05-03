@@ -1,52 +1,72 @@
-PORTFOLIO WEBSITE - DOWNLOAD INSTRUCTIONS
-====================================
+# Portfolio Website Setup Instructions
 
-Here are 4 ways to download your portfolio website code from Replit:
+## Downloading and Setup
 
-METHOD 1: USING THE FILES PANEL
---------------------------------
-1. Look for the "Files" panel on the left side of the Replit interface
-2. Right-click on folders/files you want to download (client, server, etc.)
-3. Select "Download" from the context menu
-4. Repeat for each important folder/file
+1. Download and extract the project files to your local machine
 
-METHOD 2: USING THE THREE-DOT MENU
-----------------------------------
-1. Look for the three-dot menu (⋮) at the top of your Replit project
-2. Click on it and look for "Download as ZIP" or similar option
-3. Save the ZIP file to your computer
+2. Install Node.js dependencies:
+   ```
+   npm install
+   ```
 
-METHOD 3: FILE MENU OPTION
--------------------------
-1. Look at the very top of your Replit window
-2. Click on the "File" menu in the top-left corner
-3. Select "Download as zip" from the dropdown
+3. Create a PostgreSQL database (if you don't have one already)
 
-METHOD 4: GITHUB EXPORT
-----------------------
-1. Click on the "Version Control" tab in the Replit sidebar (Git icon)
-2. Connect to GitHub by following the prompts
-3. Sync your code to GitHub
-4. Download from GitHub directly
+4. Create a `.env` file in the root directory with the following content:
+   ```
+   DATABASE_URL=postgresql://username:password@hostname:port/database_name
+   ```
+   Replace with your actual database credentials.
 
-IMPORTANT FOLDERS/FILES TO INCLUDE:
-----------------------------------
-- client/
-- db/
-- server/
-- shared/
-- components.json
-- drizzle.config.ts
-- package.json
-- postcss.config.js
-- tailwind.config.ts
-- tsconfig.json
-- vite.config.ts
+5. Push the database schema:
+   ```
+   npm run db:push
+   ```
 
-RUNNING LOCALLY AFTER DOWNLOAD:
------------------------------
-1. Install Node.js on your computer
-2. Open a terminal/command prompt in the project folder
-3. Run: npm install
-4. Run: npm run dev
-5. Set up PostgreSQL database and update connection string
+6. Seed the database with initial portfolio data:
+   ```
+   npm run db:seed
+   ```
+
+7. Start the development server:
+   ```
+   npm run dev
+   ```
+
+8. Open your browser and navigate to:
+   ```
+   http://localhost:5000
+   ```
+
+## Customizing Content
+
+To modify the portfolio content, update the data in `db/update-portfolio.ts` and run:
+```
+npm run db:update
+```
+
+## Building for Production
+
+To create a production build:
+```
+npm run build
+```
+
+To run the production build:
+```
+NODE_ENV=production node dist/index.js
+```
+
+## Project Structure
+
+- `/client` - Frontend React application
+- `/server` - Backend Express API
+- `/db` - Database configuration and seed data
+- `/shared` - Shared schema definitions
+- `/public` - Static assets
+
+## Technology Stack
+
+- Frontend: React, TailwindCSS, Shadcn UI
+- Backend: Express.js, Node.js
+- Database: PostgreSQL with Drizzle ORM
+- Build Tools: Vite, ESBuild

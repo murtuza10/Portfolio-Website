@@ -1,100 +1,109 @@
-# Portfolio Website Deployment Guide
+# Deployment Guide for Portfolio Website
 
-## Building for Production
+This document provides detailed instructions for deploying the portfolio website to various platforms. Follow these steps to ensure a smooth deployment process.
 
-To build the portfolio website for production, follow these steps after downloading the code:
+## Prerequisites
 
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+- Node.js (v18 or later)
+- npm (v9 or later)
+- PostgreSQL database
 
-2. **Build the project**:
-   ```bash
-   npm run build
-   ```
-   This will:
-   - Build the React frontend with Vite
-   - Compile the Express backend with esbuild
-   - Place all files in a `dist` directory
+## Environment Setup
 
-3. **Start the production server**:
+1. Create a `.env` file in the project root with the following variables:
 
-   On macOS/Linux:
-   ```bash
-   npm run start
-   ```
+```
+DATABASE_URL=postgresql://username:password@hostname:port/database_name
+```
 
-   On Windows:
-   ```bash
-   set NODE_ENV=production && node dist/index.js
-   ```
-   
-   Alternatively, you can modify the start script in package.json for Windows compatibility:
-   ```json
-   "start": "cross-env NODE_ENV=production node dist/index.js"
-   ```
-   (This requires installing cross-env: `npm install --save-dev cross-env`)
+Replace the placeholders with your actual database credentials.
 
-## What's in the Build Output
+## Building the Project
 
-After running the build command, you'll have a `dist` directory containing:
+### Option 1: Using Standard Build Process
 
-- **Client files**: Minified and optimized frontend assets
-  - HTML, CSS, and JavaScript files
-  - Images and other static assets
-  - These files are highly optimized for production
+```bash
+# Install dependencies
+npm install
 
-- **Server files**: Compiled backend code
-  - API endpoints
-  - Database connections
-  - Server configuration
+# Build the project
+npm run build
+```
 
-## Deploying to a Hosting Service
+### Option 2: Using Custom Build Script (includes config)
 
-You can deploy this application to various hosting platforms:
+```bash
+# Install dependencies
+npm install
 
-### Option 1: Traditional Node.js Hosting (Recommended)
+# Build using custom build script
+node --experimental-modules build-with-config.js
+```
 
-1. **Platforms**: DigitalOcean, Heroku, Render, Railway
-2. **Process**:
-   - Push your code to GitHub
-   - Connect your hosting platform to your repository
-   - Set up environment variables (DATABASE_URL, etc.)
-   - Deploy using the platform's Node.js deployment options
+## Running in Production
 
-### Option 2: Static Frontend + Separate Backend
+```bash
+# Start the production server
+NODE_ENV=production node dist/index.js
+```
 
-1. **Frontend**: Deploy the `dist/client` folder to Netlify, Vercel, or GitHub Pages
-2. **Backend**: Deploy the server separately to a Node.js hosting service
-3. **Configuration**: Update API URLs in the frontend to point to your backend
+## Platform-Specific Deployment
 
-## Environment Variables
+### Deploy to Vercel
 
-Make sure to set these environment variables in your production environment:
+1. Set up environment variables in the Vercel dashboard
+2. Connect your GitHub repository
+3. Configure build settings:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
 
-- `DATABASE_URL`: PostgreSQL connection string
-- `NODE_ENV`: Set to "production"
-- `PORT`: The port for your server (often set automatically by hosting providers)
+### Deploy to Railway
 
-## Database Setup
+1. Create a new project in Railway
+2. Connect to your GitHub repository
+3. Add a PostgreSQL database service
+4. Configure environment variables:
+   - `DATABASE_URL` - Use the Railway-provided PostgreSQL connection string
+5. Deploy your application
 
-For the PostgreSQL database:
+### Deploy to Heroku
 
-1. Create a PostgreSQL database on your preferred provider (ElephantSQL, Supabase, Neon, etc.)
-2. Set the `DATABASE_URL` environment variable to your database connection string
-3. Run the database migrations:
-   ```bash
-   npm run db:push
-   ```
-4. Seed the database with initial data:
-   ```bash
-   npm run db:seed
-   ```
+1. Create a new Heroku app
+2. Add the Heroku PostgreSQL add-on
+3. Set up your environment variables in Heroku's dashboard
+4. Deploy using the Heroku CLI or GitHub integration
+
+```bash
+# Using Heroku CLI
+heroku git:remote -a your-app-name
+git push heroku main
+```
+
+## Database Migration and Seeding
+
+To set up or update your database schema in production:
+
+```bash
+# Run database migrations
+npm run db:push
+
+# Seed the database with initial data
+npm run db:seed
+```
 
 ## Troubleshooting
 
-- **Missing dependencies**: Run `npm install` again if you see missing module errors
-- **Database connection issues**: Verify your DATABASE_URL is correct and the database is accessible
-- **Port conflicts**: Set a different PORT environment variable if the default port is already in use
-- **Build errors**: Check for any TypeScript errors or missing files mentioned in the build output
+- **Database Connection Issues**: Verify your DATABASE_URL is correctly formatted and accessible from your deployment environment.
+- **Build Errors**: Check for any TypeScript errors before deploying.
+- **Missing Content**: Ensure that the database has been properly seeded.
+
+## Maintenance
+
+To update the portfolio content:
+
+1. Modify the data in `db/update-portfolio.ts`
+2. Run `npm run db:update` to update the content
+
+## Contact
+
+If you encounter any issues, please contact Murtuza at the email provided in the portfolio contact section.
