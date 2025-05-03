@@ -48,7 +48,7 @@ const portfolioData = {
       title: "Student Assistant Computer Science",
       company: "ZB Med",
       location: "Bonn, Germany",
-      period: "Jun 2025 - Current",
+      period: "Jan 2025 - Current",
       description: "Working on Comparative Evaluation of NER Techniques for Agricultural Entities. Evaluating and comparing various NER techniques such as rule-based, prompting and fine-tuning on an agricultural dataset to determine their relative effectiveness and identify the optimal strategy for domain-specific entity extraction."
     },
     {
@@ -70,7 +70,7 @@ const portfolioData = {
     { name: "Java", percentage: 90 },
     { name: "Python", percentage: 85 },
     { name: "Machine Learning", percentage: 85 },
-    { name: "C++", percentage: 70 },
+    { name: "C++", percentage: 80 },
     { name: "JavaScript", percentage: 75 },
     { name: "Web Development", percentage: 75 }
   ],

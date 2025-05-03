@@ -4,7 +4,7 @@ export const portfolioData: PortfolioData = {
   profile: {
     name: "Murtuza Husain",
     tagline: "MSc Computer Science student at the University of Bonn with professional experience in Software Engineering.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    image: "/images/profile.jpeg"
   },
   education: [
     {
@@ -46,8 +46,8 @@ export const portfolioData: PortfolioData = {
     { name: "Java", percentage: 90 },
     { name: "Python", percentage: 85 },
     { name: "Machine Learning", percentage: 85 },
+    { name: "C++", percentage: 80 },
     { name: "JavaScript", percentage: 75 },
-    { name: "C++", percentage: 70 },
     { name: "Web Development", percentage: 75 }
   ],
   tools: [
@@ -71,7 +71,7 @@ export const portfolioData: PortfolioData = {
       title: "Student Assistant Computer Science",
       company: "ZB Med",
       location: "Bonn, Germany",
-      period: "Jun 2025 - Current",
+      period: "Jan 2025 - Current",
       description: "Working on Comparative Evaluation of NER Techniques for Agricultural Entities. Evaluating and comparing various NER techniques such as rule-based, prompting and fine-tuning on an agricultural dataset to determine their relative effectiveness and identify the optimal strategy for domain-specific entity extraction."
     },
     {
