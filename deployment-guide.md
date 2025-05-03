@@ -19,9 +19,22 @@ To build the portfolio website for production, follow these steps after download
    - Place all files in a `dist` directory
 
 3. **Start the production server**:
+
+   On macOS/Linux:
    ```bash
    npm run start
    ```
+
+   On Windows:
+   ```bash
+   set NODE_ENV=production && node dist/index.js
+   ```
+   
+   Alternatively, you can modify the start script in package.json for Windows compatibility:
+   ```json
+   "start": "cross-env NODE_ENV=production node dist/index.js"
+   ```
+   (This requires installing cross-env: `npm install --save-dev cross-env`)
 
 ## What's in the Build Output
 
