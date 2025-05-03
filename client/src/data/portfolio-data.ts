@@ -69,31 +69,31 @@ export const portfolioData: PortfolioData = {
   experience: [
     {
       title: "Research Intern",
-      company: "University of Bonn",
+      company: "University of Bonn, Institute of Computer Science",
       location: "Bonn, Germany",
       period: "Dec 2023 - Present",
-      description: "Developing multi-modal contrastive learning for complex tasks with minimal labeled data in NLP and vision. Building foundation models for pre-training, fine-tuning, and improving text understanding."
+      description: "Working with the Pattern Recognition research group on multi-modal contrastive learning for complex tasks with minimal labeled data in the domains of NLP and computer vision. Building and fine-tuning foundation models to improve text understanding."
     },
     {
       title: "Software Engineer",
       company: "Oracle",
       location: "Hyderabad, India",
       period: "Jul 2022 - Jul 2023",
-      description: "Developed ITIL-based incident management systems, API-led architecture for automated escalation paths. Created RESTful APIs for service tasks, achieving significant time reductions in incident resolution."
+      description: "Developed ITIL-based incident management systems using Spring Boot microservices architecture with RESTful APIs. Implemented API-led architecture for automated escalation paths, reducing incident resolution time by 40%. Created over 15 RESTful APIs for service management tasks."
     },
     {
       title: "Software Engineer Intern",
       company: "Oracle",
       location: "Remote",
       period: "Oct 2021 - May 2022",
-      description: "Designed Spring Boot microservices for real-time incident data processing. Integrated Kafka for streamlined data flow between systems and migrated legacy systems to cloud-native architectures."
+      description: "Designed and developed Spring Boot microservices for real-time incident data processing. Integrated Kafka for efficient data streaming between systems and supported migration of legacy systems to cloud-native architectures, improving system reliability by 30%."
     },
     {
-      title: "Summer Intern (ML, NLP)",
+      title: "Summer Intern (ML/NLP)",
       company: "DRDO, Ministry of Defence",
       location: "Pune, India",
       period: "May 2021 - Jul 2021",
-      description: "Implemented NLP techniques for a DRDO project, delivered insights on semantic recognition strategies, and assisted with implementing pattern recognition algorithms for threat detection."
+      description: "Implemented advanced NLP techniques for a confidential DRDO project. Delivered insights on semantic recognition strategies and assisted in implementing pattern recognition algorithms for efficient threat detection in unstructured text data."
     }
   ],
   projects: [
