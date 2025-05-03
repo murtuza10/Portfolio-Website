@@ -1,33 +1,89 @@
-// This script helps download your portfolio project
+// download-helper.js
+// This script helps prepare project files for download
+
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
-console.log('Creating a downloadable version of your portfolio project...');
-
-// List of important directories and files to include
-const itemsToInclude = [
+// Directories to include in download
+const includeDirs = [
   'client',
-  'db',
   'server',
+  'db',
   'shared',
-  'components.json',
-  'drizzle.config.ts',
-  'package.json',
-  'postcss.config.js',
-  'tailwind.config.ts',
-  'tsconfig.json',
-  'vite.config.ts'
+  'public'
 ];
 
-console.log('Your project files are ready for download.');
-console.log('\nTo download your project:');
-console.log('1. Look for the files panel on the left side of the screen');
-console.log('2. Right-click on any of the following files/folders:');
-itemsToInclude.forEach(item => {
-  console.log(`   - ${item}`);
-});
-console.log('3. Select "Download" from the context menu');
-console.log('\nRepeat this process for each main folder/file listed above to get your complete project.');
-console.log('\nAlternatively, you can click on the three dots menu (...) in the top navigation bar and look for a download option there.');
-console.log('\nMethod 3: Click on the "Files" tab in the left sidebar, then use the download option from there for individual folders/files.');
+// Files to include in download
+const includeFiles = [
+  'package.json',
+  'package-lock.json',
+  'tsconfig.json',
+  '.env.example',
+  'vite.config.ts',
+  'postcss.config.js',
+  'tailwind.config.ts',
+  'drizzle.config.ts',
+  'components.json',
+  'config.js',
+  'config.d.ts',
+  'build-with-config.js',
+  'deployment-guide.md',
+  'download-instructions.txt'
+];
 
+// Create download directory
+const downloadDir = path.join(process.cwd(), 'download');
+if (!fs.existsSync(downloadDir)) {
+  fs.mkdirSync(downloadDir);
+}
+
+// Helper to copy directory recursively
+function copyDir(src, dest) {
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true });
+  }
+  
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
+// Copy directories
+for (const dir of includeDirs) {
+  const srcDir = path.join(process.cwd(), dir);
+  const destDir = path.join(downloadDir, dir);
+  
+  if (fs.existsSync(srcDir)) {
+    console.log(`Copying directory: ${dir}`);
+    copyDir(srcDir, destDir);
+  }
+}
+
+// Copy individual files
+for (const file of includeFiles) {
+  const srcFile = path.join(process.cwd(), file);
+  const destFile = path.join(downloadDir, file);
+  
+  if (fs.existsSync(srcFile)) {
+    console.log(`Copying file: ${file}`);
+    fs.copyFileSync(srcFile, destFile);
+  }
+}
+
+// Create .env.example file
+const envExampleContent = 'DATABASE_URL=postgresql://username:password@hostname:port/database_name';
+fs.writeFileSync(path.join(downloadDir, '.env.example'), envExampleContent);
+
+console.log('\nDownload package prepared successfully!');
+console.log(`Files are available in the '${downloadDir}' directory`);
+console.log('Follow the instructions in download-instructions.txt to set up the project.');
