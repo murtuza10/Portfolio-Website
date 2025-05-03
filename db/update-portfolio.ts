@@ -99,7 +99,7 @@ const portfolioData = {
       category: "Full Stack",
       tags: ["Machine Learning", "Recommendation System", "Web Development"],
       links: {
-        github: "#"
+        github: "https://github.com/murtuza10/Tourist-Spot-Recommendation-System"
       }
     },
     {
@@ -110,7 +110,7 @@ const portfolioData = {
       category: "Mobile Development",
       tags: ["Android", "Mobile App", "Healthcare"],
       links: {
-        github: "#"
+        github: "https://github.com/murtuza10/Medicare-Android-Application"
       }
     },
     {
@@ -121,7 +121,7 @@ const portfolioData = {
       category: "Web Development",
       tags: ["ReactJS", "MySQL", "NodeJS"],
       links: {
-        github: "#"
+        github: "https://github.com/murtuza10/SL1_L10_Pune_Metro_Booking_System"
       }
     },
     {
@@ -132,7 +132,7 @@ const portfolioData = {
       category: "Web Development",
       tags: ["JavaScript", "HTML", "CSS", "API Integration"],
       links: {
-        github: "#",
+        github: "https://github.com/murtuza10/Weather-App",
         demo: "#"
       }
     }

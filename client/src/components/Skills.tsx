@@ -99,17 +99,17 @@ export default function Skills({ skills = [], tools = [], languages = [] }: Skil
           </div>
         </div>
 
-        <div className="mt-16 bg-primary bg-opacity-5 rounded-lg p-8">
+        <div className="mt-16 bg-gray-100 border border-gray-200 rounded-lg p-8 shadow-sm">
           <h3 className="text-2xl font-semibold mb-6 font-source text-primary">Languages</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {displayLanguages.map((language, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <div className="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full">
+                <div className="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-30 rounded-full shadow-sm">
                   <span className="text-lg font-bold text-secondary">{language.code}</span>
                 </div>
                 <div>
-                  <h4 className="font-medium text-lg">{language.name}</h4>
-                  <p className="text-sm text-gray-600">{language.proficiency}</p>
+                  <h4 className="font-medium text-lg text-gray-900">{language.name}</h4>
+                  <p className="text-sm text-gray-800">{language.proficiency}</p>
                 </div>
               </div>
             ))}
