@@ -18,16 +18,16 @@ export default function Home() {
 
   useEffect(() => {
     // Set the page title
-    document.title = "Max Wagner - Computer Science Portfolio";
+    document.title = "Murtuza Husain - Computer Science Portfolio";
     
     // Set meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional portfolio of Max Wagner, MSc Computer Science student at University of Bonn');
+      metaDescription.setAttribute('content', 'Professional portfolio of Murtuza Husain, MSc Computer Science student at University of Bonn');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Professional portfolio of Max Wagner, MSc Computer Science student at University of Bonn';
+      meta.content = 'Professional portfolio of Murtuza Husain, MSc Computer Science student at University of Bonn';
       document.head.appendChild(meta);
     }
   }, []);
