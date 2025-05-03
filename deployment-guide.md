@@ -10,6 +10,8 @@ This document provides detailed instructions for deploying the portfolio website
 
 ## Environment Setup
 
+### Development Environment
+
 1. Create a `.env` file in the project root with the following variables:
 
 ```
@@ -17,6 +19,30 @@ DATABASE_URL=postgresql://username:password@hostname:port/database_name
 ```
 
 Replace the placeholders with your actual database credentials.
+
+### Production Environment
+
+For production deployment, you have two options for setting environment variables:
+
+#### Option 1: Using a .env file in production
+
+1. Create a `.env` file in the same directory as your deployed application
+2. Add your production database URL:
+
+```
+DATABASE_URL=postgresql://username:password@hostname:port/database_name
+NODE_ENV=production
+```
+
+#### Option 2: Setting environment variables in your hosting platform (Recommended)
+
+Most hosting platforms provide a way to set environment variables in their dashboard:
+
+1. **Vercel**: Go to your project settings → Environment Variables → Add the variables
+2. **Railway**: Navigate to your project → Variables → Add `DATABASE_URL`
+3. **Heroku**: Use `heroku config:set DATABASE_URL=your_connection_string`
+
+This is generally more secure as it keeps sensitive information out of your codebase.
 
 ## Building the Project
 

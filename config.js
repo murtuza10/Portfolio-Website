@@ -2,18 +2,38 @@
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import fs from 'fs';
 
 // Get current file's directory
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Load environment variables from .env file
-dotenv.config({ path: join(__dirname, '.env') });
+// Try multiple possible locations for .env file
+const possibleEnvPaths = [
+  join(__dirname, '.env'),                 // Root directory
+  join(__dirname, '..', '.env'),          // One level up (for production builds)
+  join(process.cwd(), '.env'),            // Current working directory
+];
+
+let envLoaded = false;
+
+for (const envPath of possibleEnvPaths) {
+  if (fs.existsSync(envPath)) {
+    console.log(`Loading environment from: ${envPath}`);
+    dotenv.config({ path: envPath });
+    envLoaded = true;
+    break;
+  }
+}
+
+if (!envLoaded) {
+  console.warn('Warning: No .env file found. Using environment variables if available.');
+}
 
 // Validate required environment variables
 if (!process.env.DATABASE_URL) {
   console.error('Error: DATABASE_URL environment variable is required');
-  console.log('Using fallback database URL from environment if available');
+  console.error('Please create a .env file with DATABASE_URL or set the environment variable.');
 }
 
 /**
