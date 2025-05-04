@@ -10,9 +10,9 @@ const __dirname = dirname(__filename);
 
 // Try multiple possible locations for .env file
 const possibleEnvPaths = [
-  join(__dirname, '.env'),                 // Root directory
-  join(__dirname, '..', '.env'),          // One level up (for production builds)
   join(process.cwd(), '.env'),            // Current working directory
+  join(__dirname, '.env'),                // Root directory
+  join(__dirname, '..', '.env'),          // One level up
 ];
 
 let envLoaded = false;
