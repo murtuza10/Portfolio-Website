@@ -1,8 +1,13 @@
-[project]
+[tool.poetry]
 name = "repl-nix-workspace"
 version = "0.1.0"
 description = "Add your description here"
-requires-python = ">=3.11"
-dependencies = [
-    "pypdf2>=3.0.1",
-]
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+pypdf2 = ">=3.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
