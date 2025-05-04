@@ -78,6 +78,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Serve profile image directly
+  app.get("/images/profile.jpeg", (req, res) => {
+    const imagePath = path.join(process.cwd(), "client", "public", "images", "profile.jpeg");
+    res.sendFile(imagePath);
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;

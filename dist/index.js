@@ -206,6 +206,10 @@ async function registerRoutes(app2) {
       res.status(500).json({ message: "Error downloading resume" });
     }
   });
+  app2.get("/images/profile.jpeg", (req, res) => {
+    const imagePath = path.join(process.cwd(), "client", "public", "images", "profile.jpeg");
+    res.sendFile(imagePath);
+  });
   const httpServer = createServer(app2);
   return httpServer;
 }
@@ -242,7 +246,23 @@ var vite_config_default = defineConfig({
   root: path2.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path2.resolve(import.meta.dirname, "dist/public"),
-    emptyOutDir: true
+    emptyOutDir: true,
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === "profile.jpeg") {
+            return "images/[name][extname]";
+          }
+          return "assets/[name]-[hash][extname]";
+        }
+      }
+    }
+  },
+  server: {
+    watch: {
+      usePolling: true
+    }
   }
 });
 
