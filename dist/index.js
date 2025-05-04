@@ -12,12 +12,12 @@ import fs from "fs";
 var __filename = fileURLToPath(import.meta.url);
 var __dirname = dirname(__filename);
 var possibleEnvPaths = [
+  join(process.cwd(), ".env"),
+  // Current working directory
   join(__dirname, ".env"),
   // Root directory
-  join(__dirname, "..", ".env"),
-  // One level up (for production builds)
-  join(process.cwd(), ".env")
-  // Current working directory
+  join(__dirname, "..", ".env")
+  // One level up
 ];
 var envLoaded = false;
 for (const envPath of possibleEnvPaths) {
@@ -355,11 +355,7 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
   const port = 5e3;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true
-  }, () => {
+  server.listen(port, "localhost", () => {
     log(`serving on port ${port}`);
   });
 })();
