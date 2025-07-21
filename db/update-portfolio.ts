@@ -4,21 +4,21 @@ import * as schema from "@shared/schema";
 const portfolioData = {
   profile: {
     name: "Murtuza Husain",
-    tagline: "MSc Computer Science student at the University of Bonn with professional experience in Software Engineering.",
-    image: "/images/profile.jpeg"
+    tagline: "Energetic and results-driven professional with 2.5 years of professional experience, including 1.3 years as a Software Engineer at Avaya. Currently pursuing an M.S. in Computer Science at the University of Bonn and working as a student assistant at ZB Med. Adept at fostering innovation through collaborative teamwork and delivering high-quality software solutions in dynamic environments. With a strong foundation in both academic research and practical application, I bring a versatile technical skill set and a passion for solving complex challenges. Eager to contribute expertise to impactful and forward-thinking projects in Computer Science.",
+    image: "/images/profile.png"
   },
   education: [
     {
       degree: "MSc in Computer Science",
       institution: "University of Bonn, Germany",
-      period: "2023 - Current",
-      details: "Pursuing Master's degree in Computer Science with focus on Machine Learning and NLP."
+      period: "2023 - 2025",
+      details: "Master's degree in Computer Science with focus on Machine Learning and Software Engineering."
     },
     {
       degree: "Bachelor of Engineering - Information Technology (AI and ML Honors)",
       institution: "Pune Institute of Computer Technology, India",
       period: "2018 - 2022",
-      details: "Graduated with CGPA: 9.74/10, specializing in AI and Machine Learning."
+      details: "Graduated with CGPA: 9.74/10."
     }
   ],
   interests: [
