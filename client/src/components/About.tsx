@@ -23,7 +23,13 @@ export default function About({ education = [], interests = [] }: AboutProps) {
           <h2 className="section-title">About Me</h2>
           <div className="section-divider"></div>
           <p className="section-description">
-            Computer Science graduate student with a passion for solving complex problems through innovative technology solutions.
+          I’m Murtuza Husain — a software engineer with a Master’s degree in Computer Science from the University of Bonn. With 2.5+ years of hands-on experience across industry and research, I specialize in backend development, scalable cloud-native systems, and natural language processing (NLP).
+
+My journey spans building robust Java microservices and real-time data pipelines at Avaya, to developing domain-specific NER and relation extraction models at leading research institutes like GESIS and ZB Med. I work extensively with modern tools and frameworks such as Spring Boot, Kafka, Hugging Face, spaCy, and LLM APIs.
+
+I thrive at the intersection of engineering and AI — where reliable systems meet intelligent automation. Whether designing APIs, optimizing ML pipelines, or contributing to impactful research, I aim to build solutions that are both technically sound and human-centered.
+
+I'm always eager to learn, collaborate, and contribute to projects that push boundaries and solve real-world problems through smart, scalable technology.
           </p>
         </div>
         

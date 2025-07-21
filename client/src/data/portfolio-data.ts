@@ -3,21 +3,21 @@ import { PortfolioData } from "@/lib/types";
 export const portfolioData: PortfolioData = {
   profile: {
     name: "Murtuza Husain",
-    tagline: "MSc Computer Science student at the University of Bonn with professional experience in Software Engineering.",
+    tagline: "From Scalable Systems to NLP Models — Code That Drives Impact.",
     image: "/images/profile.jpeg"
   },
   education: [
     {
       degree: "MSc in Computer Science",
       institution: "University of Bonn, Germany",
-      period: "2023 - Current",
-      details: "Pursuing Master's degree in Computer Science with focus on Machine Learning and NLP."
+      period: "2023 - 2025",
+      details: "Master's degree in Computer Science with focus on Machine Learning and Software Engineering."
     },
     {
       degree: "Bachelor of Engineering - Information Technology (AI and ML Honors)",
       institution: "Pune Institute of Computer Technology, India",
       period: "2018 - 2022",
-      details: "Graduated with CGPA: 9.74/10, specializing in AI and Machine Learning."
+      details: "Graduated with CGPA: 9.74/10."
     }
   ],
   interests: [
