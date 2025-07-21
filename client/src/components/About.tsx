@@ -19,7 +19,7 @@ export default function About({ education = [], interests = [] }: AboutProps) {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="mb-12 text-center">
+        <div className="mb-12">
           <h2 className="section-title">About Me</h2>
           <div className="section-divider"></div>
           <p className="section-description">
