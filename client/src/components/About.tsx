@@ -20,25 +20,32 @@ export default function About({ education = [], interests = [] }: AboutProps) {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-6">
       <div className="mb-12 w-full px-4 md:px-8">
-  <h2 className="text-2xl font-bold mb-4">About Me</h2>
-  <div className="h-1 w-16 bg-blue-500 mb-6"></div>
-  <p className="text-base leading-relaxed max-w-5xl">
-    I’m Murtuza Husain — a software engineer with a Master’s degree in Computer Science from the University of Bonn. 
-    With 2.5+ years of hands-on experience across industry and research, I specialize in backend development, scalable 
-    cloud-native systems, and natural language processing (NLP).
-    <br /><br />
-    My journey spans building robust Java microservices and real-time data pipelines at Avaya, to developing domain-specific 
-    NER and relation extraction models at leading research institutes like GESIS and ZB Med. I work extensively with modern 
-    tools and frameworks such as Spring Boot, Kafka, Hugging Face, spaCy, and LLM APIs.
-    <br /><br />
-    I thrive at the intersection of engineering and AI — where reliable systems meet intelligent automation. Whether designing 
-    APIs, optimizing ML pipelines, or contributing to impactful research, I aim to build solutions that are both technically 
-    sound and human-centered.
-    <br /><br />
-    I'm always eager to learn, collaborate, and contribute to projects that push boundaries and solve real-world problems 
-    through smart, scalable technology.
-  </p>
+  <h2 className="section-title text-3xl font-bold mb-4">About Me</h2>
+  <div className="section-divider h-1 w-20 bg-blue-500 mb-6"></div>
+  
+  <div className="text-base leading-relaxed max-w-none">
+    <p className="mb-4">
+      I’m Murtuza Husain — a software engineer with a Master’s degree in Computer Science from the University of Bonn. 
+      With 2.5+ years of hands-on experience across industry and research, I specialize in backend development, scalable 
+      cloud-native systems, and natural language processing (NLP).
+    </p>
+    <p className="mb-4">
+      My journey spans building robust Java microservices and real-time data pipelines at Avaya, to developing domain-specific 
+      NER and relation extraction models at leading research institutes like GESIS and ZB Med. I work extensively with modern 
+      tools and frameworks such as Spring Boot, Kafka, Hugging Face, spaCy, and LLM APIs.
+    </p>
+    <p className="mb-4">
+      I thrive at the intersection of engineering and AI — where reliable systems meet intelligent automation. Whether designing 
+      APIs, optimizing ML pipelines, or contributing to impactful research, I aim to build solutions that are both technically 
+      sound and human-centered.
+    </p>
+    <p>
+      I'm always eager to learn, collaborate, and contribute to projects that push boundaries and solve real-world problems 
+      through smart, scalable technology.
+    </p>
+  </div>
 </div>
+
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <Card className="card-hover">
