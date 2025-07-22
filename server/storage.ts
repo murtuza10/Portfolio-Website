@@ -1,5 +1,5 @@
 import { db } from "@db";
-import { portfolio, messages, resume } from "@shared/schema";
+import { portfolio, messages, resume, viewCounter } from "@shared/schema";
 import { eq } from "drizzle-orm";
 
 export const storage = {
@@ -41,5 +41,33 @@ export const storage = {
   getResume: async () => {
     const resumeData = await db.query.resume.findFirst();
     return resumeData;
+  },
+  
+  // View counter functions
+  getViewCount: async () => {
+    const viewData = await db.query.viewCounter.findFirst();
+    return viewData;
+  },
+  
+  incrementViewCount: async () => {
+    const existingView = await db.query.viewCounter.findFirst();
+    
+    if (existingView) {
+      const result = await db
+        .update(viewCounter)
+        .set({ 
+          totalViews: existingView.totalViews + 1,
+          lastViewedAt: new Date().toISOString()
+        })
+        .where(eq(viewCounter.id, existingView.id))
+        .returning();
+      return result[0];
+    } else {
+      const result = await db.insert(viewCounter).values({
+        totalViews: 1,
+        lastViewedAt: new Date().toISOString()
+      }).returning();
+      return result[0];
+    }
   },
 };

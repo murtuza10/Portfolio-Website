@@ -98,11 +98,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-6 rounded-md transition duration-300 text-center;
+    @apply bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-6 rounded-md transition duration-300 text-center transform hover:scale-105 hover:shadow-xl;
   }
 
   .btn-outline {
-    @apply border-2 border-white hover:bg-white hover:text-primary text-white font-medium py-3 px-6 rounded-md transition duration-300 text-center;
+    @apply border-2 border-white hover:bg-white hover:text-primary text-white font-medium py-3 px-6 rounded-md transition-all duration-300 text-center transform hover:scale-105 hover:shadow-xl;
   }
 
   .section-title {
@@ -110,30 +110,110 @@
   }
 
   .section-divider {
-    @apply w-20 h-1 bg-secondary mx-auto mb-6;
+    @apply w-20 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-6;
   }
 
   .section-description {
-    @apply text-lg text-gray-600 max-w-3xl mx-auto;
+    @apply text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto;
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg;
+    @apply transition-all duration-500 hover:translate-y-[-8px] hover:shadow-2xl hover:scale-105 hover:rotate-1;
   }
 
   .progress-bar {
-    @apply h-2 rounded bg-gray-200;
+    @apply h-2 rounded-full bg-gray-200 dark:bg-gray-700;
   }
   
   .progress-value {
-    @apply h-2 rounded bg-secondary;
+    @apply h-2 rounded-full bg-gradient-to-r from-secondary to-accent transition-all duration-1000 ease-out;
   }
   
   .nav-link {
-    @apply px-1 py-2 font-medium text-primary hover:text-secondary transition duration-300;
+    @apply px-1 py-2 font-medium text-primary dark:text-white hover:text-secondary transition-all duration-300 relative;
   }
   
   .nav-link.active {
     @apply text-secondary border-b-2 border-secondary;
   }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-white/10 dark:bg-black/10 backdrop-blur-lg border border-white/20 dark:border-gray-700/20;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    @apply animate-pulse;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, #3b82f6, #ef4444) border-box;
+    border: 2px solid transparent;
+  }
+
+  .typewriter {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.8s ease-out;
 }

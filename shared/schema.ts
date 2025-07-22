@@ -35,6 +35,13 @@ export const resume = pgTable("resume", {
   createdAt: text("created_at").notNull(),
 });
 
+// View counter table to track page views
+export const viewCounter = pgTable("view_counter", {
+  id: serial("id").primaryKey(),
+  totalViews: integer("total_views").notNull().default(0),
+  lastViewedAt: text("last_viewed_at").notNull(),
+});
+
 // Schema for portfolio data
 export const portfolioInsertSchema = createInsertSchema(portfolio);
 export type PortfolioInsert = z.infer<typeof portfolioInsertSchema>;
@@ -47,7 +54,12 @@ export type MessageInsert = z.infer<typeof messageInsertSchema>;
 export const resumeInsertSchema = createInsertSchema(resume);
 export type ResumeInsert = z.infer<typeof resumeInsertSchema>;
 
+// Schema for view counter
+export const viewCounterInsertSchema = createInsertSchema(viewCounter);
+export type ViewCounterInsert = z.infer<typeof viewCounterInsertSchema>;
+
 // Export types
 export type Portfolio = typeof portfolio.$inferSelect;
 export type Message = typeof messages.$inferSelect;
 export type Resume = typeof resume.$inferSelect;
+export type ViewCounter = typeof viewCounter.$inferSelect;

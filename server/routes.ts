@@ -84,6 +84,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.sendFile(imagePath);
   });
 
+  // API route to get view count
+  app.get("/api/views", async (req, res) => {
+    try {
+      const viewData = await storage.getViewCount();
+      res.json(viewData || { totalViews: 0, lastViewedAt: new Date().toISOString() });
+    } catch (error) {
+      console.error("Error fetching view count:", error);
+      res.status(500).json({ message: "Error fetching view count" });
+    }
+  });
+
+  // API route to increment view count
+  app.post("/api/views/increment", async (req, res) => {
+    try {
+      const updatedView = await storage.incrementViewCount();
+      res.json(updatedView);
+    } catch (error) {
+      console.error("Error incrementing view count:", error);
+      res.status(500).json({ message: "Error incrementing view count" });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;

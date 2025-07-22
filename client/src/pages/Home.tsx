@@ -8,6 +8,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Resume from "@/components/Resume";
+import ViewCounter from "@/components/ViewCounter";
 import { useQuery } from "@tanstack/react-query";
 import { portfolioData } from "@/data/portfolio-data";
 
@@ -47,6 +48,7 @@ export default function Home() {
         <Contact contact={data?.contact} />
       </main>
       <Footer profile={data?.profile} />
+      <ViewCounter />
     </div>
   );
 }

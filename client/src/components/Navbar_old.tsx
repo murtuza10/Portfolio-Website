@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Sun, Moon, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Download, Menu, Sun, Moon } from "lucide-react";
 import { Link } from "wouter";
 import { useTheme } from "@/components/ThemeProvider";
 import { motion, AnimatePresence } from "framer-motion";
@@ -155,7 +156,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <Menu className="h-6 w-6" />
             </motion.button>
           </div>
         </div>
@@ -214,5 +215,101 @@ export default function Navbar() {
         </AnimatePresence>
       </nav>
     </motion.header>
+  );
+}
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className={`nav-link ${
+                  activeSection === item.href.substring(1) ? "active" : ""
+                }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetId = item.href.substring(1);
+                  const targetElement = document.getElementById(targetId);
+                  if (targetElement) {
+                    window.scrollTo({
+                      top: targetElement.offsetTop - 80,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          {/* Resume Button */}
+          <div className="hidden md:block">
+            <Button className="flex items-center" asChild>
+              <a
+                href="/documents/Murtuza-CV-April25.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Resume
+              </a>
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle menu"
+            >
+              <Menu className="h-6 w-6" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Menu (Hidden by default) */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-2" id="mobile-menu">
+            <div className="flex flex-col space-y-3">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="py-2 px-1 font-medium text-primary hover:text-secondary"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const targetId = item.href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                      window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: "smooth",
+                      });
+                      closeMobileMenu();
+                    }
+                  }}
+                >
+                  {item.name}
+                </a>
+              ))}
+              <Button className="flex items-center w-fit" asChild>
+                <a
+                  href="/documents/Murtuza-CV-April25.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Resume
+                </a>
+              </Button>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
   );
 }

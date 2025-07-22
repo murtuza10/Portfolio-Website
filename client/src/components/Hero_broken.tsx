@@ -248,7 +248,7 @@ export default function Hero({ profile }: HeroProps) {
               ))}
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
       
       {/* Wave Animation */}
