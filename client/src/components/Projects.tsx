@@ -15,14 +15,22 @@ export default function Projects({ projects = [] }: ProjectsProps) {
   // Use provided projects data (from database/API)
   const displayProjects = projects;
 
+  // Debug logging
+  console.log('Projects data:', displayProjects);
+  console.log('Current filter:', filter);
+
   // Fixed categories to match database data
   const allCategories = displayProjects.map(p => p.category).filter(Boolean);
   const categories = ["All", ...Array.from(new Set(allCategories))];
+  
+  console.log('Available categories:', categories);
   
   // Exact category matching
   const filteredProjects = filter === "All" 
     ? displayProjects 
     : displayProjects.filter(p => p.category === filter);
+  
+  console.log('Filtered projects:', filteredProjects);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -48,7 +56,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
 
   return (
     <section id="projects" className="py-20 particle-bg relative overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div 
           className="mb-12 text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +77,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
 
         {/* Filter Buttons */}
         <motion.div 
-          className="flex flex-wrap justify-center gap-3 mb-10"
+          className="flex flex-wrap justify-center gap-3 mb-10 relative z-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,14 +86,20 @@ export default function Projects({ projects = [] }: ProjectsProps) {
           {categories.map((category) => (
             <motion.button
               key={category}
-              onClick={() => setFilter(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setFilter(category);
+                console.log('Filter clicked:', category); // Debug log
+              }}
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 cursor-pointer z-30 relative ${
                 filter === category
                   ? 'bg-gradient-to-r from-secondary to-accent text-white shadow-lg'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              style={{ pointerEvents: 'all' }}
             >
               {category}
             </motion.button>
