@@ -11,87 +11,9 @@ interface ProjectsProps {
 
 export default function Projects({ projects = [] }: ProjectsProps) {
   const [filter, setFilter] = useState<string>("All");
-  // Default projects if none provided
-  const displayProjects = projects.length > 0 ? projects : [
-    {
-      id: 1,
-      title: "Deep Learning for Medical Imaging",
-      description: "Developed a convolutional neural network for detecting anomalies in medical scans with 92% accuracy.",
-      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      category: "Machine Learning",
-      tags: ["PyTorch", "CNN", "Medical AI"],
-      links: {
-        github: "#",
-        paper: "#",
-        demo: ""
-      }
-    },
-    {
-      id: 2,
-      title: "Sentiment Analysis Tool",
-      description: "Created an NLP model to analyze sentiment in product reviews with 88% accuracy using transformer architecture.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      category: "NLP",
-      tags: ["BERT", "Transformers", "TensorFlow"],
-      links: {
-        github: "#",
-        demo: "#",
-        paper: ""
-      }
-    },
-    {
-      id: 3,
-      title: "Climate Data Visualization",
-      description: "Built an interactive dashboard to analyze and visualize global climate patterns using 50+ years of data.",
-      image: "https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      category: "Data Science",
-      tags: ["Python", "D3.js", "Pandas"],
-      links: {
-        github: "#",
-        demo: "#",
-        paper: ""
-      }
-    },
-    {
-      id: 4,
-      title: "Algorithmic Trading Strategy",
-      description: "Designed and implemented a machine learning-based trading algorithm that outperformed market benchmarks.",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      category: "Algorithms",
-      tags: ["Python", "ML", "Financial Data"],
-      links: {
-        github: "#",
-        paper: "#",
-        demo: ""
-      }
-    },
-    {
-      id: 5,
-      title: "Image Generation with GANs",
-      description: "Developed a Generative Adversarial Network to create realistic landscape images from text descriptions.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      category: "Deep Learning",
-      tags: ["GAN", "PyTorch", "Computer Vision"],
-      links: {
-        github: "#",
-        demo: "#",
-        paper: ""
-      }
-    },
-    {
-      id: 6,
-      title: "Academic Paper Recommender",
-      description: "Built a recommendation system for academic papers based on user reading history and citation networks.",
-      image: "https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      category: "Systems",
-      tags: ["Recommender Systems", "Graph Neural Networks", "Python"],
-      links: {
-        github: "#",
-        paper: "#",
-        demo: ""
-      }
-    }
-  ];
+  
+  // Use provided projects data (from database/API)
+  const displayProjects = projects;
 
   const categories = ["All", ...Array.from(new Set(displayProjects.map(p => p.category).filter(Boolean)))];
   const filteredProjects = filter === "All" ? displayProjects : displayProjects.filter(p => p.category === filter);

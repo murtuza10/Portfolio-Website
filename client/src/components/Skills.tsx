@@ -1,10 +1,11 @@
 import { SkillItem, ToolItem, LanguageItem } from "@/lib/types";
+import { motion } from "framer-motion";
 import { 
   SiPython, SiTensorflow, SiPytorch, SiMysql, 
   SiGit, SiDocker, SiPandas, 
   SiSpring, SiKubernetes, SiApachekafka, SiHtml5
 } from "react-icons/si";
-import { BarChart2, Terminal, Cloud, Share, Layers, Database, Server } from "lucide-react";
+import { BarChart2, Terminal, Cloud, Share, Layers, Database, Server, Sparkles } from "lucide-react";
 
 interface SkillsProps {
   skills?: SkillItem[];
@@ -56,30 +57,62 @@ export default function Skills({ skills = [], tools = [], languages = [] }: Skil
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 morphing-bg">
       <div className="container mx-auto px-6">
-        <div className="mb-12 text-center">
-          <h2 className="section-title">Skills & Expertise</h2>
+        <motion.div 
+          className="mb-12 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <Sparkles className="h-6 w-6 text-secondary animate-pulse" />
+            <h2 className="section-title">Skills & Expertise</h2>
+            <Sparkles className="h-6 w-6 text-secondary animate-pulse" />
+          </div>
           <div className="section-divider"></div>
           <p className="section-description">
             My technical toolkit and specialized knowledge areas
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-semibold mb-6 font-source text-primary">Technical Skills</h3>
             <div className="space-y-6">
               {displaySkills.map((skill, index) => (
-                <div key={index} className="mb-4">
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span>{skill.percentage}%</span>
+                <motion.div 
+                  key={index} 
+                  className="mb-6 p-4 glass-card rounded-lg hover:shadow-lg transition-all duration-300"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02, y: -2 }}
+                >
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="font-semibold text-gray-800 dark:text-gray-200 text-lg">{skill.name}</span>
+                    <motion.span 
+                      className="text-sm font-bold gradient-text"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      {skill.percentage}%
+                    </motion.span>
                   </div>
-                  <div className="progress-bar">
-                    <div className="progress-value" style={{ width: `${skill.percentage}%` }}></div>
+                  <div className="progress-bar skill-bar bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden h-3">
+                    <motion.div 
+                      className="h-full rounded-full bg-gradient-to-r from-secondary to-accent shadow-lg"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.percentage}%` }}
+                      transition={{ duration: 1.5, delay: 0.3 + index * 0.1, ease: "easeOut" }}
+                      viewport={{ once: true }}
+                    />
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -88,33 +121,62 @@ export default function Skills({ skills = [], tools = [], languages = [] }: Skil
             <h3 className="text-2xl font-semibold mb-6 font-source text-primary">Tools & Frameworks</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {displayTools.map((tool, index) => (
-                <div key={index} className="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg bg-gray-50 hover:bg-gray-100 transition duration-300">
-                  <div className="text-xl text-secondary mb-2">
-                    {toolIcons[tool.icon] || <SiPython className="text-xl text-secondary" />}
-                  </div>
-                  <span className="text-sm font-medium">{tool.name}</span>
-                </div>
+                <motion.div 
+                  key={index} 
+                  className="flex flex-col items-center justify-center p-4 glass-card rounded-lg hover:shadow-lg transition-all duration-300 group"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  <motion.div 
+                    className="text-2xl mb-3 group-hover:scale-110 transition-transform duration-300"
+                    whileHover={{ rotate: 5 }}
+                  >
+                    {toolIcons[tool.icon] || <SiPython className="text-2xl text-secondary" />}
+                  </motion.div>
+                  <span className="text-sm font-semibold text-center">{tool.name}</span>
+                </motion.div>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-16 bg-gray-100 border border-gray-200 rounded-lg p-8 shadow-sm">
-          <h3 className="text-2xl font-semibold mb-6 font-source text-primary">Languages</h3>
+        <motion.div 
+          className="mt-16 glass-card rounded-xl p-8 shadow-lg"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-semibold mb-6 font-source gradient-text text-center">Languages</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {displayLanguages.map((language, index) => (
-              <div key={index} className="flex items-center space-x-4">
-                <div className="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-30 rounded-full shadow-sm">
-                  <span className="text-lg font-bold text-secondary">{language.code}</span>
-                </div>
+              <motion.div 
+                key={index} 
+                className="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-all duration-300"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, y: -2 }}
+              >
+                <motion.div 
+                  className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-secondary to-accent rounded-full shadow-lg"
+                  whileHover={{ rotate: 10, scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <span className="text-lg font-bold text-white">{language.code}</span>
+                </motion.div>
                 <div>
-                  <h4 className="font-medium text-lg text-gray-900">{language.name}</h4>
-                  <p className="text-sm text-gray-800">{language.proficiency}</p>
+                  <h4 className="font-semibold text-lg text-gray-900 dark:text-gray-100">{language.name}</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{language.proficiency}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
