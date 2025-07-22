@@ -82,7 +82,7 @@ export default function Resume() {
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            PDF • Updated April 2025 • 2.1 MB
+            PDF • Updated July 2025 • 2.1 MB
           </motion.div>
         </motion.div>
       </div>

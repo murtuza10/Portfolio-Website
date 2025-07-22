@@ -15,28 +15,14 @@ export default function Projects({ projects = [] }: ProjectsProps) {
   // Use provided projects data (from database/API)
   const displayProjects = projects;
 
-  // Debug logging
-  console.log('Projects data:', displayProjects);
-  console.log('Current filter:', filter);
-
   // Fixed categories to match database data
   const allCategories = displayProjects.map(p => p.category).filter(Boolean);
   const categories = ["All", ...Array.from(new Set(allCategories))];
   
-  console.log('Available categories:', categories);
-  
-  // Exact category matching with detailed debugging
+  // Exact category matching
   const filteredProjects = filter === "All" 
     ? displayProjects 
-    : displayProjects.filter(p => {
-        const categoryMatch = p.category === filter;
-        console.log(`Project: "${p.title}" | Category: "${p.category}" | Filter: "${filter}" | Match: ${categoryMatch}`);
-        console.log(`Category length: ${p.category?.length}, Filter length: ${filter?.length}`);
-        return categoryMatch;
-      });
-  
-  console.log('Filtered projects count:', filteredProjects.length);
-  console.log('Filtered projects:', filteredProjects);
+    : displayProjects.filter(p => p.category === filter);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -95,9 +81,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log('Button clicked for category:', category);
                 setFilter(category);
-                console.log('Filter set to:', category); // Debug log
               }}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 cursor-pointer z-30 relative ${
                 filter === category
