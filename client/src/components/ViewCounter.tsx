@@ -43,6 +43,13 @@ export default function ViewCounter() {
     }
   }, []);
 
+  // Debug function to clear session storage and force increment
+  const forceIncrement = () => {
+    sessionStorage.removeItem("view-incremented");
+    incrementViews.mutate();
+    sessionStorage.setItem("view-incremented", "true");
+  };
+
   // Animate the counter
   useEffect(() => {
     if (viewData?.totalViews) {
@@ -128,6 +135,15 @@ export default function ViewCounter() {
         </div>
         
         <div className="mt-3 h-1 bg-gradient-to-r from-secondary to-accent rounded-full pulse-glow"></div>
+        
+        {/* Debug button - remove in production */}
+        <button 
+          onClick={forceIncrement}
+          className="mt-2 w-full text-xs py-1 px-2 bg-accent/20 hover:bg-accent/30 rounded text-accent transition-colors duration-200"
+          title="Click to increment view count"
+        >
+          Test Increment
+        </button>
       </Card>
     </motion.div>
   );
