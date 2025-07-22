@@ -45,6 +45,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // API route to get all messages (admin functionality)
+  app.get("/api/messages", async (req, res) => {
+    try {
+      const messages = await storage.getMessages();
+      res.json(messages);
+    } catch (error) {
+      console.error("Error fetching messages:", error);
+      res.status(500).json({ message: "Error fetching messages" });
+    }
+  });
+
   // API route to download resume
   app.get("/api/download-resume", async (req, res) => {
     try {
