@@ -54,8 +54,8 @@ export default function Contact({ contact }: ContactProps) {
     try {
       await apiRequest("POST", "/api/contact", data);
       toast({
-        title: "Message Sent",
-        description: "Thank you for your message. I'll get back to you soon!",
+        title: "Message Saved",
+        description: "Your message has been saved to the database. In a real implementation, this would send an email notification.",
         variant: "default"
       });
       form.reset();

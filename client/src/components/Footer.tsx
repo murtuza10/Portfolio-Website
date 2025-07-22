@@ -63,9 +63,9 @@ export default function Footer({ profile }: FooterProps) {
               viewport={{ once: true }}
             >
               {[
-                { href: profile?.contact?.social?.github || "https://github.com/murtuza10", icon: Github, label: "GitHub" },
-                { href: profile?.contact?.social?.linkedin || "https://linkedin.com/in/murtuzahusain/", icon: Linkedin, label: "LinkedIn" },
-                { href: profile?.contact?.social?.twitter || "https://twitter.com/", icon: Twitter, label: "Twitter" },
+                { href: "https://github.com/murtuza10", icon: Github, label: "GitHub" },
+                { href: "https://linkedin.com/in/murtuzahusain/", icon: Linkedin, label: "LinkedIn" },
+                { href: "https://twitter.com/", icon: Twitter, label: "Twitter" },
                 { href: "mailto:murtuzanh@gmail.com", icon: Mail, label: "Email" }
               ].map((social, index) => (
                 <motion.a
@@ -76,9 +76,9 @@ export default function Footer({ profile }: FooterProps) {
                   rel={social.href.startsWith('mailto:') ? undefined : "noopener noreferrer"}
                   whileHover={{ 
                     scale: 1.2, 
-                    rotate: 360,
-                    boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)"
+                    rotate: 360
                   }}
+                  style={{ boxShadow: "0 0 0px rgba(0, 0, 0, 0)" }}
                   whileTap={{ scale: 0.9 }}
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -216,9 +216,9 @@ export default function Footer({ profile }: FooterProps) {
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-secondary to-accent text-white rounded-full hover:from-secondary/80 hover:to-accent/80 transition-all duration-300 shadow-lg hover:shadow-xl"
               download="Murtuza-CV-July25.pdf"
               whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 10px 30px rgba(59, 130, 246, 0.3)"
+                scale: 1.05
               }}
+              style={{ boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)" }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

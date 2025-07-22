@@ -115,8 +115,12 @@ export default function Navbar() {
                 }`}
                 whileHover={{ 
                   scale: 1.05, 
-                  y: -2,
-                  boxShadow: "0 10px 30px rgba(59, 130, 246, 0.3)"
+                  y: -2
+                }}
+                style={{
+                  boxShadow: activeSection === item.href.slice(1) 
+                    ? "0 10px 30px rgba(59, 130, 246, 0.3)"
+                    : "0 0px 0px rgba(0, 0, 0, 0)"
                 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: -20 }}
@@ -136,11 +140,6 @@ export default function Navbar() {
                       behavior: 'smooth'
                     });
                   }
-                }}
-                style={{
-                  background: activeSection === item.href.slice(1) 
-                    ? 'linear-gradient(45deg, rgba(59, 130, 246, 1), rgba(147, 51, 234, 1))'
-                    : undefined
                 }}
               >
                 {item.name}
