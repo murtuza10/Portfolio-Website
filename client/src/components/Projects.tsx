@@ -15,8 +15,14 @@ export default function Projects({ projects = [] }: ProjectsProps) {
   // Use provided projects data (from database/API)
   const displayProjects = projects;
 
-  const categories = ["All", ...Array.from(new Set(displayProjects.map(p => p.category).filter(Boolean)))];
-  const filteredProjects = filter === "All" ? displayProjects : displayProjects.filter(p => p.category === filter);
+  // Fixed categories to match database data
+  const allCategories = displayProjects.map(p => p.category).filter(Boolean);
+  const categories = ["All", ...Array.from(new Set(allCategories))];
+  
+  // Exact category matching
+  const filteredProjects = filter === "All" 
+    ? displayProjects 
+    : displayProjects.filter(p => p.category === filter);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,7 +47,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
   };
 
   return (
-    <section id="projects" className="py-20 bg-background dark:bg-background">
+    <section id="projects" className="py-20 particle-bg relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div 
           className="mb-12 text-center"
@@ -99,8 +105,9 @@ export default function Projects({ projects = [] }: ProjectsProps) {
               variants={cardVariants}
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ duration: 0.3 }}
+              className="hover-lift card-3d"
             >
-              <Card className="overflow-hidden h-full glass-card border-2 border-transparent hover:border-secondary/30 transition-all duration-300 group">
+              <Card className="overflow-hidden h-full glass-card border-2 border-transparent hover:border-secondary/30 hover:neon-glow transition-all duration-300 group">
                 <div className="relative h-48 overflow-hidden">
                   {project.image && (
                     <motion.img 

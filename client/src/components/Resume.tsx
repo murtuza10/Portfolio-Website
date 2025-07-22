@@ -11,19 +11,19 @@ export default function Resume() {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'Murtuza-CV-April25.pdf';
+        a.download = 'Murtuza-CV-July25.pdf';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
         window.URL.revokeObjectURL(url);
       } else {
         // Fallback to direct link if API fails
-        window.open('/documents/Murtuza-CV-April25.pdf', '_blank');
+        window.open('/documents/Murtuza-CV-July25.pdf', '_blank');
       }
     } catch (error) {
       console.error('Download failed:', error);
       // Fallback to direct link
-      window.open('/documents/Murtuza-CV-April25.pdf', '_blank');
+      window.open('/documents/Murtuza-CV-July25.pdf', '_blank');
     }
   };
 

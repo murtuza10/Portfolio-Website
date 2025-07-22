@@ -154,8 +154,8 @@ async function seed() {
     
     if (existingResume.length === 0) {
       await db.insert(schema.resume).values({
-        filename: "Murtuza-CV-April25.pdf",
-        path: "./attached_assets/Murtuza-CV-April25.pdf",
+        filename: "Murtuza-CV-July25.pdf",
+        path: "./attached_assets/Murtuza-CV-July25.pdf",
         mimeType: "application/pdf",
         createdAt: new Date().toISOString()
       });
