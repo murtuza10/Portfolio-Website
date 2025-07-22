@@ -1,0 +1,171 @@
+ 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+ [LaunchDarkly] LaunchDarkly client initialized
+Portfolio-Website:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+[GroupMarkerNotSet(crbug.com/242999)!:A080550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A080550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A080550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A080550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A080550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A080550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A080550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+Portfolio-Website:1 [GroupMarkerNotSet(crbug.com/242999)!:A010560284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+ Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'battery'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'layout-animations'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'navigation-override'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'oversized-images'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'publickey-credentials'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'speaker-selection'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'unoptimized-images'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'unsized-media'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Unrecognized feature: 'pointer-lock'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+ Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-a2c83c04b9eb85e5.js:1
+[GroupMarkerNotSet(crbug.com/242999)!:A0E0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A0E0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A0E0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A0E0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[GroupMarkerNotSet(crbug.com/242999)!:A0E0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+Portfolio-Website:1 [GroupMarkerNotSet(crbug.com/242999)!:A0B0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+Portfolio-Website:1 Uncaught (in promise) 
+Portfolio-Website:1 Uncaught (in promise) 
+Portfolio-Website:1 Uncaught (in promise) 
+Portfolio-Website:1 [GroupMarkerNotSet(crbug.com/242999)!:A0B0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+Portfolio-Website:1 [GroupMarkerNotSet(crbug.com/242999)!:A0B0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+Portfolio-Website:1 [GroupMarkerNotSet(crbug.com/242999)!:A0B0550284400000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+workspace_iframe.html:32 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html:32 Unrecognized feature: 'battery'.
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html:32 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html:32 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html:32 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html:32 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html:32 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html:32 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html:32 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html:32 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+ Projects data: Array(4)
+ Current filter: All
+ Available categories: Array(4)
+ Filtered projects count: 4
+ Filtered projects: Array(4)
+ Button clicked for category: Full Stack
+ Filter set to: Full Stack
+ Projects data: Array(4)
+Console.js:61 Current filter: Full Stack
+Console.js:61 Available categories: Array(4)
+Console.js:61 Project: "Tourist Spot Recommendation System" | Category: "Full Stack" | Filter: "Full Stack" | Match: true
+Console.js:61 Category length: 10, Filter length: 10
+Console.js:61 Project: "Medicare (Android Application)" | Category: "Mobile Development" | Filter: "Full Stack" | Match: false
+Console.js:61 Category length: 18, Filter length: 10
+Console.js:61 Project: "Pune Metro Booking System" | Category: "Web Development" | Filter: "Full Stack" | Match: false
+Console.js:61 Category length: 15, Filter length: 10
+Console.js:61 Project: "Weather App" | Category: "Web Development" | Filter: "Full Stack" | Match: false
+Console.js:61 Category length: 15, Filter length: 10
+Console.js:61 Filtered projects count: 1
+Console.js:61 Filtered projects: Array(1)
+Console.js:61 Button clicked for category: Mobile Development
+Console.js:61 Filter set to: Mobile Development
+Console.js:61 Projects data: Array(4)
+Console.js:61 Current filter: Mobile Development
+Console.js:61 Available categories: Array(4)
+Console.js:61 Project: "Tourist Spot Recommendation System" | Category: "Full Stack" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 10, Filter length: 18
+Console.js:61 Project: "Medicare (Android Application)" | Category: "Mobile Development" | Filter: "Mobile Development" | Match: true
+Console.js:61 Category length: 18, Filter length: 18
+Console.js:61 Project: "Pune Metro Booking System" | Category: "Web Development" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 15, Filter length: 18
+Console.js:61 Project: "Weather App" | Category: "Web Development" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 15, Filter length: 18
+Console.js:61 Filtered projects count: 1
+Console.js:61 Filtered projects: Array(1)
+Console.js:61 Button clicked for category: Web Development
+Console.js:61 Filter set to: Web Development
+Console.js:61 Projects data: Array(4)
+Console.js:61 Current filter: Web Development
+Console.js:61 Available categories: Array(4)
+Console.js:61 Project: "Tourist Spot Recommendation System" | Category: "Full Stack" | Filter: "Web Development" | Match: false
+Console.js:61 Category length: 10, Filter length: 15
+Console.js:61 Project: "Medicare (Android Application)" | Category: "Mobile Development" | Filter: "Web Development" | Match: false
+Console.js:61 Category length: 18, Filter length: 15
+Console.js:61 Project: "Pune Metro Booking System" | Category: "Web Development" | Filter: "Web Development" | Match: true
+Console.js:61 Category length: 15, Filter length: 15
+Console.js:61 Project: "Weather App" | Category: "Web Development" | Filter: "Web Development" | Match: true
+Console.js:61 Category length: 15, Filter length: 15
+Console.js:61 Filtered projects count: 2
+Console.js:61 Filtered projects: Array(2)
+Console.js:61 Button clicked for category: Mobile Development
+Console.js:61 Filter set to: Mobile Development
+Console.js:61 Projects data: Array(4)
+Console.js:61 Current filter: Mobile Development
+Console.js:61 Available categories: Array(4)0: "All"1: "Full Stack"2: "Mobile Development"3: "Web Development"length: 4[[Prototype]]: Array(0)
+Console.js:61 Project: "Tourist Spot Recommendation System" | Category: "Full Stack" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 10, Filter length: 18
+Console.js:61 Project: "Medicare (Android Application)" | Category: "Mobile Development" | Filter: "Mobile Development" | Match: true
+Console.js:61 Category length: 18, Filter length: 18
+Console.js:61 Project: "Pune Metro Booking System" | Category: "Web Development" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 15, Filter length: 18
+Console.js:61 Project: "Weather App" | Category: "Web Development" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 15, Filter length: 18
+Console.js:61 Filtered projects count: 1
+Console.js:61 Filtered projects: Array(1)
+Console.js:61 Button clicked for category: Mobile Development
+Console.js:61 Filter set to: Mobile Development
+Console.js:61 Projects data: (4) [{…}, {…}, {…}, {…}]
+Console.js:61 Current filter: Mobile Development
+Console.js:61 Available categories: (4) ['All', 'Full Stack', 'Mobile Development', 'Web Development']
+Console.js:61 Project: "Tourist Spot Recommendation System" | Category: "Full Stack" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 10, Filter length: 18
+Console.js:61 Project: "Medicare (Android Application)" | Category: "Mobile Development" | Filter: "Mobile Development" | Match: true
+Console.js:61 Category length: 18, Filter length: 18
+Console.js:61 Project: "Pune Metro Booking System" | Category: "Web Development" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 15, Filter length: 18
+Console.js:61 Project: "Weather App" | Category: "Web Development" | Filter: "Mobile Development" | Match: false
+Console.js:61 Category length: 15, Filter length: 18
+Console.js:61 Filtered projects count: 1
+Console.js:61 Filtered projects: [{…}]0: {id: 2, title: 'Medicare (Android Application)', description: 'Designed and developed an Android app that simplif…r hospitals by region and specialization offline.', image: 'https://images.unsplash.com/photo-1576091160550-21…ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80', category: 'Mobile Development', …}length: 1[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object

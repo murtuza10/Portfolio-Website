@@ -118,19 +118,14 @@ export default function Projects({ projects = [] }: ProjectsProps) {
           Showing {filteredProjects.length} project(s) for "{filter}"
         </div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredProjects.length > 0 ? filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              variants={cardVariants}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              transition={{ duration: 0.3 }}
               className="hover-lift card-3d"
             >
               <Card className="overflow-hidden h-full glass-card border-2 border-transparent hover:border-secondary/30 hover:neon-glow transition-all duration-300 group">
@@ -253,7 +248,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
               </p>
             </div>
           )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
