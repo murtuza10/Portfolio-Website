@@ -28,8 +28,12 @@ export default function Projects({ projects = [] }: ProjectsProps) {
   // Exact category matching
   const filteredProjects = filter === "All" 
     ? displayProjects 
-    : displayProjects.filter(p => p.category === filter);
+    : displayProjects.filter(p => {
+        console.log(`Comparing project category "${p.category}" with filter "${filter}"`);
+        return p.category === filter;
+      });
   
+  console.log('Filtered projects count:', filteredProjects.length);
   console.log('Filtered projects:', filteredProjects);
 
   const containerVariants = {
@@ -106,6 +110,11 @@ export default function Projects({ projects = [] }: ProjectsProps) {
           ))}
         </motion.div>
         
+        {/* Debug info */}
+        <div className="text-center mb-4 text-sm text-gray-500 dark:text-gray-400">
+          Showing {filteredProjects.length} project(s) for "{filter}"
+        </div>
+
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -113,7 +122,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.length > 0 ? filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
@@ -234,7 +243,13 @@ export default function Projects({ projects = [] }: ProjectsProps) {
                 </CardContent>
               </Card>
             </motion.div>
-          ))}
+          )) : (
+            <div className="col-span-full text-center py-12">
+              <p className="text-gray-500 dark:text-gray-400 text-lg">
+                No projects found for "{filter}"
+              </p>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
