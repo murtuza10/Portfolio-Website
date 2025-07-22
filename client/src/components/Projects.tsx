@@ -25,12 +25,14 @@ export default function Projects({ projects = [] }: ProjectsProps) {
   
   console.log('Available categories:', categories);
   
-  // Exact category matching
+  // Exact category matching with detailed debugging
   const filteredProjects = filter === "All" 
     ? displayProjects 
     : displayProjects.filter(p => {
-        console.log(`Comparing project category "${p.category}" with filter "${filter}"`);
-        return p.category === filter;
+        const categoryMatch = p.category === filter;
+        console.log(`Project: "${p.title}" | Category: "${p.category}" | Filter: "${filter}" | Match: ${categoryMatch}`);
+        console.log(`Category length: ${p.category?.length}, Filter length: ${filter?.length}`);
+        return categoryMatch;
       });
   
   console.log('Filtered projects count:', filteredProjects.length);
@@ -93,8 +95,9 @@ export default function Projects({ projects = [] }: ProjectsProps) {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                console.log('Button clicked for category:', category);
                 setFilter(category);
-                console.log('Filter clicked:', category); // Debug log
+                console.log('Filter set to:', category); // Debug log
               }}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 cursor-pointer z-30 relative ${
                 filter === category
