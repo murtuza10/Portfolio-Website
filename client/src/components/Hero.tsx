@@ -236,7 +236,7 @@ export default function Hero({ profile }: HeroProps) {
               </motion.div>
               
               {/* Floating Skills */}
-              {['React', 'AI/ML', 'TypeScript', 'Python'].map((skill, index) => (
+              {['Java', 'AI/ML', 'C++', 'Python'].map((skill, index) => (
                 <motion.div
                   key={skill}
                   className="absolute glass-card px-3 py-2 rounded-full text-white text-sm font-medium"

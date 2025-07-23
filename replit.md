@@ -77,6 +77,12 @@ A full-stack portfolio website built with React, Express, TypeScript and Postgre
 ✓ Enhanced fetch requests with proper credentials and error handling
 ✓ Component now gracefully handles API failures in production environment
 
+### Profile Skills Update (July 23, 2025)
+✓ Updated floating skills around profile image from React/TypeScript to Java/C++
+✓ Changed skill badges in Hero component to accurately reflect expertise: Java, AI/ML, C++, Python
+✓ Created modern SVG profile skills badge highlighting Java (90%) and C++ (80%) as top skills
+✓ Skills display now matches database portfolio data with correct technical expertise
+
 ## Architecture Details
 ### Frontend Structure
 - `client/src/pages/` - Page components (Home, 404)
