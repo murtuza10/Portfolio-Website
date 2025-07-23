@@ -119,11 +119,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
         name: error.name
       } : { message: String(error) };
       console.error("Error details:", errorDetails);
+      console.error("DATABASE_URL exists:", !!process.env.DATABASE_URL);
+      console.error("Database connection test...");
       
-      res.status(500).json({ 
-        message: "Error fetching view count",
-        details: process.env.NODE_ENV === 'development' ? errorDetails.message : undefined
-      });
+      // Try to create initial view counter if it doesn't exist
+      try {
+        console.log("Attempting to initialize view counter...");
+        const initialView = await storage.incrementViewCount();
+        console.log("View counter initialized:", initialView);
+        return res.json(initialView);
+      } catch (initError) {
+        console.error("Failed to initialize view counter:", initError);
+        res.status(500).json({ 
+          message: "Error fetching view count",
+          details: process.env.NODE_ENV === 'development' ? errorDetails.message : undefined
+        });
+      }
     }
   });
 
@@ -142,6 +153,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         name: error.name
       } : { message: String(error) };
       console.error("Error details:", errorDetails);
+      console.error("DATABASE_URL exists:", !!process.env.DATABASE_URL);
       
       res.status(500).json({ 
         message: "Error incrementing view count",

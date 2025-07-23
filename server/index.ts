@@ -11,8 +11,12 @@ const app = express();
 
 // Enable CORS for production deployment
 app.use(cors({
-  origin: true,
-  credentials: true
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://*.replit.app', 'https://*.replit.dev', /^https:\/\/.*\.replit\.app$/] 
+    : true,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
 
 app.use(express.json());
