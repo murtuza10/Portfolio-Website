@@ -71,6 +71,35 @@ app.use(cors({
 3. **API Connectivity**: Check browser console for detailed error messages
 4. **Database Access**: Verify PostgreSQL connection is properly configured
 
+### Common Deployment Issues and Solutions
+
+#### Issue 1: 500 Internal Server Error
+**Symptoms**: ViewCounter shows loading state, API returns 500 errors
+**Causes**: 
+- Database connection failure in production
+- Missing environment variables
+- Table/schema mismatch
+
+**Solutions**:
+1. Check DATABASE_URL is properly set in deployment environment
+2. Verify database tables exist: `portfolio`, `messages`, `resume`, `view_counter`
+3. Check server logs for detailed error messages
+4. Test database connection manually
+
+#### Issue 2: CORS Errors
+**Symptoms**: Network errors in browser console, blocked requests
+**Causes**: Cross-origin restrictions in production environment
+**Solutions**:
+- CORS middleware is now enabled with proper credentials
+- Verify deployment serves frontend and backend from same domain
+
+#### Issue 3: API Route Not Found
+**Symptoms**: 404 errors for /api/views endpoints
+**Causes**: Static file serving conflicts with API routes
+**Solutions**:
+- API routes are registered before static file serving
+- Verify build process includes all server routes
+
 ### Environment Variables Required
 
 ```bash

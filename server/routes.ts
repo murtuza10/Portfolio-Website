@@ -98,22 +98,55 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // API route to get view count
   app.get("/api/views", async (req, res) => {
     try {
+      console.log("Attempting to fetch view count...");
       const viewData = await storage.getViewCount();
-      res.json(viewData || { totalViews: 0, lastViewedAt: new Date().toISOString() });
+      console.log("View data retrieved:", viewData);
+      
+      if (!viewData) {
+        console.log("No view data found, creating initial entry...");
+        // Create initial view counter if it doesn't exist
+        const initialView = await storage.incrementViewCount();
+        console.log("Initial view created:", initialView);
+        return res.json(initialView);
+      }
+      
+      res.json(viewData);
     } catch (error) {
       console.error("Error fetching view count:", error);
-      res.status(500).json({ message: "Error fetching view count" });
+      const errorDetails = error instanceof Error ? {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      } : { message: String(error) };
+      console.error("Error details:", errorDetails);
+      
+      res.status(500).json({ 
+        message: "Error fetching view count",
+        details: process.env.NODE_ENV === 'development' ? errorDetails.message : undefined
+      });
     }
   });
 
   // API route to increment view count
   app.post("/api/views/increment", async (req, res) => {
     try {
+      console.log("Attempting to increment view count...");
       const updatedView = await storage.incrementViewCount();
+      console.log("View count incremented:", updatedView);
       res.json(updatedView);
     } catch (error) {
       console.error("Error incrementing view count:", error);
-      res.status(500).json({ message: "Error incrementing view count" });
+      const errorDetails = error instanceof Error ? {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      } : { message: String(error) };
+      console.error("Error details:", errorDetails);
+      
+      res.status(500).json({ 
+        message: "Error incrementing view count",
+        details: process.env.NODE_ENV === 'development' ? errorDetails.message : undefined
+      });
     }
   });
 
