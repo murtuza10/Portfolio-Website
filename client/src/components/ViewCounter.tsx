@@ -14,10 +14,13 @@ export default function ViewCounter() {
   const [animatedCount, setAnimatedCount] = useState(0);
 
   // Fetch current view count
-  const { data: viewData, isLoading } = useQuery<ViewData>({
+  const { data: viewData, isLoading, error } = useQuery<ViewData>({
     queryKey: ["/api/views"],
     refetchOnWindowFocus: false,
   });
+
+  // Debug logging
+  console.log("ViewCounter Debug:", { viewData, isLoading, error, animatedCount });
 
   // Increment view count mutation
   const incrementViews = useMutation({
