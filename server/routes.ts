@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import path from "path";
 import fs from "fs";
 import express from "express";
+import { registerHealthRoutes } from "./routes/health";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Serve static files from client/public
@@ -99,6 +100,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/views", async (req, res) => {
     try {
       console.log("Attempting to fetch view count...");
+      console.log("Environment:", process.env.NODE_ENV);
       const viewData = await storage.getViewCount();
       console.log("View data retrieved:", viewData);
       
@@ -122,16 +124,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error("DATABASE_URL exists:", !!process.env.DATABASE_URL);
       console.error("Environment:", process.env.NODE_ENV);
       
-      // Production fallback: Return a default view count to prevent frontend crashes
-      if (process.env.NODE_ENV === 'production') {
-        console.log("Production mode: returning fallback view count");
-        return res.json({
-          id: 1,
-          totalViews: 150, // Fallback count for production
-          lastViewedAt: new Date().toISOString()
-        });
-      }
-      
       // Try to create initial view counter if it doesn't exist
       try {
         console.log("Attempting to initialize view counter...");
@@ -140,12 +132,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.json(initialView);
       } catch (initError) {
         console.error("Failed to initialize view counter:", initError);
-        
-        // Final fallback - return success with default data
-        res.status(200).json({ 
-          id: 1,
-          totalViews: 150,
-          lastViewedAt: new Date().toISOString()
+        res.status(500).json({ 
+          message: "Database connection failed",
+          details: process.env.NODE_ENV === 'development' ? String(initError) : "Database unavailable"
         });
       }
     }
@@ -155,6 +144,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/views/increment", async (req, res) => {
     try {
       console.log("Attempting to increment view count...");
+      console.log("Environment:", process.env.NODE_ENV);
       const updatedView = await storage.incrementViewCount();
       console.log("View count incremented:", updatedView);
       res.json(updatedView);
@@ -169,23 +159,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error("DATABASE_URL exists:", !!process.env.DATABASE_URL);
       console.error("Environment:", process.env.NODE_ENV);
       
-      // Production fallback: Return success to prevent frontend errors
-      if (process.env.NODE_ENV === 'production') {
-        console.log("Production mode: returning fallback increment response");
-        return res.json({
-          id: 1,
-          totalViews: 151, // Incremented fallback count
-          lastViewedAt: new Date().toISOString()
-        });
-      }
-      
-      res.status(200).json({ 
-        id: 1,
-        totalViews: 151,
-        lastViewedAt: new Date().toISOString()
+      res.status(500).json({ 
+        message: "Database connection failed",
+        details: process.env.NODE_ENV === 'development' ? String(error) : "Database unavailable"
       });
     }
   });
+
+  // Register health check routes
+  registerHealthRoutes(app);
 
   const httpServer = createServer(app);
 

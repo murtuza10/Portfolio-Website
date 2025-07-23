@@ -13,16 +13,16 @@ export default function ViewCounter() {
   const queryClient = useQueryClient();
   const [animatedCount, setAnimatedCount] = useState(0);
 
-  // Fetch current view count with enhanced production error handling
+  // Fetch current view count
   const { data: viewData, isLoading, error } = useQuery<ViewData>({
     queryKey: ["/api/views"],
     refetchOnWindowFocus: false,
     retry: (failureCount, error: any) => {
-      // Don't retry on 404s, but do retry on 500s (production database issues)
-      if (error?.message?.includes('404')) return false;
-      return failureCount < 6; // Increased retry count for production issues
+      // Don't retry on 404s or permanent failures
+      if (error?.message?.includes('404') || error?.message?.includes('Database connection failed')) return false;
+      return failureCount < 3;
     },
-    retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 15000),
+    retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 5000),
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
 
