@@ -19,8 +19,7 @@ export default function ViewCounter() {
     refetchOnWindowFocus: false,
   });
 
-  // Debug logging
-  console.log("ViewCounter Debug:", { viewData, isLoading, error, animatedCount });
+
 
   // Increment view count mutation
   const incrementViews = useMutation({
@@ -93,9 +92,16 @@ export default function ViewCounter() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-6 right-6 z-[9999] pointer-events-auto"
+      style={{ 
+        position: 'fixed', 
+        bottom: '24px', 
+        right: '24px', 
+        zIndex: 9999,
+        transform: 'translateZ(0)' // Force hardware acceleration
+      }}
     >
-      <Card className="glass-card p-4 w-64 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-secondary/20">
+      <Card className="glass-card p-4 w-64 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-secondary/20 bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center space-x-2">
             <Eye className="h-5 w-5 text-secondary animate-pulse" />
