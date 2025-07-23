@@ -1,0 +1,164 @@
+index-DJpxhzPL.js:48  GET https://portfolio-website-22yb.onrender.com/api/views 500 (Internal Server Error)
+(anonymous) @ index-DJpxhzPL.js:48
+i @ index-DJpxhzPL.js:48
+b @ index-DJpxhzPL.js:48
+start @ index-DJpxhzPL.js:48
+fetch @ index-DJpxhzPL.js:48
+to @ index-DJpxhzPL.js:48
+onSubscribe @ index-DJpxhzPL.js:48
+subscribe @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Pv @ index-DJpxhzPL.js:38
+ku @ index-DJpxhzPL.js:40
+Xs @ index-DJpxhzPL.js:40
+Lm @ index-DJpxhzPL.js:40
+Fr @ index-DJpxhzPL.js:38
+RS @ index-DJpxhzPL.js:40
+Hr @ index-DJpxhzPL.js:40
+l1 @ index-DJpxhzPL.js:40
+_ @ index-DJpxhzPL.js:25
+V @ index-DJpxhzPL.js:25
+index-DJpxhzPL.js:48  GET https://portfolio-website-22yb.onrender.com/api/views 500 (Internal Server Error)
+(anonymous) @ index-DJpxhzPL.js:48
+i @ index-DJpxhzPL.js:48
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+start @ index-DJpxhzPL.js:48
+fetch @ index-DJpxhzPL.js:48
+to @ index-DJpxhzPL.js:48
+onSubscribe @ index-DJpxhzPL.js:48
+subscribe @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Pv @ index-DJpxhzPL.js:38
+ku @ index-DJpxhzPL.js:40
+Xs @ index-DJpxhzPL.js:40
+Lm @ index-DJpxhzPL.js:40
+Fr @ index-DJpxhzPL.js:38
+RS @ index-DJpxhzPL.js:40
+Hr @ index-DJpxhzPL.js:40
+l1 @ index-DJpxhzPL.js:40
+_ @ index-DJpxhzPL.js:25
+V @ index-DJpxhzPL.js:25
+index-DJpxhzPL.js:48  GET https://portfolio-website-22yb.onrender.com/api/views 500 (Internal Server Error)
+(anonymous) @ index-DJpxhzPL.js:48
+i @ index-DJpxhzPL.js:48
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+start @ index-DJpxhzPL.js:48
+fetch @ index-DJpxhzPL.js:48
+to @ index-DJpxhzPL.js:48
+onSubscribe @ index-DJpxhzPL.js:48
+subscribe @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Pv @ index-DJpxhzPL.js:38
+ku @ index-DJpxhzPL.js:40
+Xs @ index-DJpxhzPL.js:40
+Lm @ index-DJpxhzPL.js:40
+Fr @ index-DJpxhzPL.js:38
+RS @ index-DJpxhzPL.js:40
+Hr @ index-DJpxhzPL.js:40
+l1 @ index-DJpxhzPL.js:40
+_ @ index-DJpxhzPL.js:25
+V @ index-DJpxhzPL.js:25
+index-DJpxhzPL.js:48  GET https://portfolio-website-22yb.onrender.com/api/views 500 (Internal Server Error)
+(anonymous) @ index-DJpxhzPL.js:48
+i @ index-DJpxhzPL.js:48
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+start @ index-DJpxhzPL.js:48
+fetch @ index-DJpxhzPL.js:48
+to @ index-DJpxhzPL.js:48
+onSubscribe @ index-DJpxhzPL.js:48
+subscribe @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Pv @ index-DJpxhzPL.js:38
+ku @ index-DJpxhzPL.js:40
+Xs @ index-DJpxhzPL.js:40
+Lm @ index-DJpxhzPL.js:40
+Fr @ index-DJpxhzPL.js:38
+RS @ index-DJpxhzPL.js:40
+Hr @ index-DJpxhzPL.js:40
+l1 @ index-DJpxhzPL.js:40
+_ @ index-DJpxhzPL.js:25
+V @ index-DJpxhzPL.js:25
+index-DJpxhzPL.js:261 ViewCounter error: Error: 500: {"message":"Error fetching view count"}
+    at W1 (index-DJpxhzPL.js:48:43117)
+    at async index-DJpxhzPL.js:48:43433
+Z6 @ index-DJpxhzPL.js:261
+ih @ index-DJpxhzPL.js:38
+_d @ index-DJpxhzPL.js:40
+p1 @ index-DJpxhzPL.js:40
+d1 @ index-DJpxhzPL.js:40
+AS @ index-DJpxhzPL.js:40
+Fl @ index-DJpxhzPL.js:40
+Lm @ index-DJpxhzPL.js:40
+Fr @ index-DJpxhzPL.js:38
+(anonymous) @ index-DJpxhzPL.js:40
+setTimeout
+P4 @ index-DJpxhzPL.js:48
+o @ index-DJpxhzPL.js:48
+batch @ index-DJpxhzPL.js:48
+Rn @ index-DJpxhzPL.js:48
+a @ index-DJpxhzPL.js:48
+h @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.then
+(anonymous) @ index-DJpxhzPL.js:48
+Promise.catch
+b @ index-DJpxhzPL.js:48
+start @ index-DJpxhzPL.js:48
+fetch @ index-DJpxhzPL.js:48
+to @ index-DJpxhzPL.js:48
+onSubscribe @ index-DJpxhzPL.js:48
+subscribe @ index-DJpxhzPL.js:48
+(anonymous) @ index-DJpxhzPL.js:48
+Pv @ index-DJpxhzPL.js:38
+ku @ index-DJpxhzPL.js:40
+Xs @ index-DJpxhzPL.js:40
+Lm @ index-DJpxhzPL.js:40
+Fr @ index-DJpxhzPL.js:38
+RS @ index-DJpxhzPL.js:40
+Hr @ index-DJpxhzPL.js:40
+l1 @ index-DJpxhzPL.js:40
+_ @ index-DJpxhzPL.js:25
+V @ index-DJpxhzPL.js:25
